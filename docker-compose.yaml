@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  form:
+    build:
+      context: .
+      dockerfile: packages/form/Dockerfile
+    ports:
+      - "3000:3000"
+
+  api:
+    build:
+      context: .
+      dockerfile: packages/api/Dockerfile
+    ports:
+      - "3001:3001"
+    depends_on:
+      - mailer
+    environment:
+      - PORT=3001
+      - MAILER_URL=grpc://mailer:50051
+
+  mailer:
+    build:
+      context: .
+      dockerfile: packages/mailer/Dockerfile
+    ports:
+      - "50051:50051"
+    environment:
+      - PORT=50051

@@ -1,0 +1,33 @@
+{
+  "name": "common",
+  "version": "1.0.0",
+  "description": "Shared package",
+  "keywords": [],
+  "scripts": {
+    "build": "ts-node bin/build.ts"
+  },
+  "author": "Jakub Urban",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/google-protobuf": "^3.15.12",
+    "@types/node": "^20",
+    "@types/rimraf": "^4.0.5",
+    "chokidar-cli": "^3.0.0",
+    "glob": "^11.0.0",
+    "grpc-tools": "^1.12.4",
+    "pbjs": "^0.0.14",
+    "protobufjs": "^7.3.2",
+    "protoc-gen-ts": "^0.8.7",
+    "rimraf": "~6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.11.1",
+    "@grpc/proto-loader": "^0.7.13",
+    "fs-extra": "^11.2.0",
+    "google-protobuf": "^3.21.4",
+    "zod": "^3.23.8"
+  }
+}

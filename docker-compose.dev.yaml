@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+  form:
+    container_name: form-dev
+    build:
+      context: .
+      dockerfile: packages/form/Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/app
+
+  api:
+    container_name: api-dev
+    build:
+      context: .
+      dockerfile: packages/api/Dockerfile.dev
+    ports:
+      - "3001:3001"
+    depends_on:
+      - mailer
+    volumes:
+      - ./:/app
+    environment:
+      - PORT=3001
+      - MAILER_URL=mailer:50051
+
+  mailer:
+    container_name: mailer-dev
+    build:
+      context: .
+      dockerfile: packages/mailer/Dockerfile.dev
+    ports:
+      - "50051:50051"
+    volumes:
+      - ./:/app
+    environment:
+      - PORT=50051

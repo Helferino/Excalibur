@@ -1,0 +1,1 @@
+export const isImageType = (file: File) => file.type.startsWith("image/");

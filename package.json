@@ -1,0 +1,11 @@
+{
+  "name": "excalibur-assignment",
+  "version": "1.0.0",
+  "description": "Job assignment for Excalibur",
+  "scripts": {
+    "build": "pnpm run --filter common build"
+  },
+  "keywords": [],
+  "author": "Jakub Urban",
+  "license": "ISC"
+}

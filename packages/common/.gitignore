@@ -1,0 +1,10 @@
+node_modules
+
+# Build files
+dist
+protos
+validators
+
+# Ignore source
+!src/protos
+!src/validators

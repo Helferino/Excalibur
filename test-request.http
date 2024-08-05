@@ -1,0 +1,8 @@
+POST http://localhost:3001/api/v1/mail HTTP/1.1
+content-type: application/json
+
+{
+    "receiver": "receiver123456789@gmail.com",
+    "subject": "My Subject",
+    "body": "Omae Wa Mou Shinderiu... Nani?! 👀"
+}

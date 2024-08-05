@@ -1,0 +1,12 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+RUN npm install -g pnpm
+RUN pnpm install --filter api --filter common
+
+RUN pnpm run --filter common build
+
+EXPOSE 3001
+
+CMD ["pnpm", "run", "--filter", "api", "dev"]
