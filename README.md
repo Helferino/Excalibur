@@ -1,6 +1,6 @@
 ## Excalibur Assignment
 
-Job assignment for Excalibur's Full-Stack developer position by **Jakub Urban - urbanjakub1306@gmail.com**
+Job assignment for Excalibur's Full-Stack developer (React.js + Node.js) position by **Jakub Urban - urbanjakub1306@gmail.com**
 
 ### Notes for reviewer(s)
 
@@ -60,6 +60,6 @@ I used **pnpm** monorepo with custom reusable `common` package that requires man
 
 **Others**
 
-- Connect front-end part to to API so its completed as whole full-stack app
+- Connect front-end part to to API so its completed as whole full-stack app (Out of scope for this assignment)
 - Fix typing issues in typescript (1 or 2 I think)
 - Other improvements ideas/notes are in codebase
